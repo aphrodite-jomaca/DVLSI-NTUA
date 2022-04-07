@@ -1,0 +1,1298 @@
+
+
+================================================================
+== Vivado HLS Report for 'svm'
+================================================================
+* Date:           Thu Jul 15 16:36:47 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        hls2-svm
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.232|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  188189|  188189|  188189|  188189|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+--------+--------+----------+-----------+-----------+------+----------+
+        |                   |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Sum_Outter_Loop  |  188188|  188188|       154|          -|          -|  1222|    no    |
+        | + Sum_Inner_Loop  |     112|     112|        56|          -|          -|     2|    no    |
+        +-------------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 98
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	59  / (exitcond)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	3  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %class_hw) nounwind, !map !14"   --->   Operation 99 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([18 x float]* %x) nounwind, !map !18"   --->   Operation 100 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @svm_str) nounwind"   --->   Operation 101 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (1.76ns)   --->   "br label %1" [svm.cpp:27]   --->   Operation 102 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 7.81>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%sum = phi double [ 0.000000e+00, %0 ], [ %sum_1, %5 ]"   --->   Operation 103 'phi' 'sum' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%i = phi i11 [ 0, %0 ], [ %i_1, %5 ]"   --->   Operation 104 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (1.88ns)   --->   "%exitcond1 = icmp eq i11 %i, -826" [svm.cpp:27]   --->   Operation 105 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1222, i64 1222, i64 1222) nounwind"   --->   Operation 106 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (1.63ns)   --->   "%i_1 = add i11 %i, 1" [svm.cpp:27]   --->   Operation 107 'add' 'i_1' <Predicate = true> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %6, label %2" [svm.cpp:27]   --->   Operation 108 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str) nounwind" [svm.cpp:28]   --->   Operation 109 'specloopname' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str) nounwind" [svm.cpp:28]   --->   Operation 110 'specregionbegin' 'tmp_8' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_1 = zext i11 %i to i64" [svm.cpp:35]   --->   Operation 111 'zext' 'tmp_1' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_14 = call i15 @_ssdm_op_BitConcatenate.i15.i11.i4(i11 %i, i4 0)" [svm.cpp:27]   --->   Operation 112 'bitconcatenate' 'tmp_14' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i15 %tmp_14 to i16" [svm.cpp:27]   --->   Operation 113 'zext' 'p_shl_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_15 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %i, i1 false)" [svm.cpp:27]   --->   Operation 114 'bitconcatenate' 'tmp_15' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i12 %tmp_15 to i16" [svm.cpp:35]   --->   Operation 115 'zext' 'p_shl1_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 116 [1/1] (1.94ns)   --->   "%tmp_16 = add i16 %p_shl1_cast, %p_shl_cast" [svm.cpp:35]   --->   Operation 116 'add' 'tmp_16' <Predicate = (!exitcond1)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 117 [1/1] (1.76ns)   --->   "br label %3" [svm.cpp:32]   --->   Operation 117 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%sum_to_int = bitcast double %sum to i64" [svm.cpp:66]   --->   Operation 118 'bitcast' 'sum_to_int' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%tmp = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %sum_to_int, i32 52, i32 62)" [svm.cpp:66]   --->   Operation 119 'partselect' 'tmp' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_10 = trunc i64 %sum_to_int to i52" [svm.cpp:66]   --->   Operation 120 'trunc' 'tmp_10' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 121 [1/1] (1.88ns)   --->   "%notlhs = icmp ne i11 %tmp, -1" [svm.cpp:66]   --->   Operation 121 'icmp' 'notlhs' <Predicate = (exitcond1)> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 122 [1/1] (2.89ns)   --->   "%notrhs = icmp eq i52 %tmp_10, 0" [svm.cpp:66]   --->   Operation 122 'icmp' 'notrhs' <Predicate = (exitcond1)> <Delay = 2.89> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node storemerge_cast_cast)   --->   "%tmp_11 = or i1 %notrhs, %notlhs" [svm.cpp:66]   --->   Operation 123 'or' 'tmp_11' <Predicate = (exitcond1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 124 [1/1] (6.82ns)   --->   "%tmp_12 = fcmp ogt double %sum, 0.000000e+00" [svm.cpp:69]   --->   Operation 124 'dcmp' 'tmp_12' <Predicate = (exitcond1)> <Delay = 6.82> <Core = "DCmp">   --->   Core 114 'DCmp' <Latency = 0> <II = 1> <Delay = 6.82> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node storemerge_cast_cast)   --->   "%tmp_13 = and i1 %tmp_11, %tmp_12" [svm.cpp:69]   --->   Operation 125 'and' 'tmp_13' <Predicate = (exitcond1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 126 [1/1] (0.99ns) (out node of the LUT)   --->   "%storemerge_cast_cast = select i1 %tmp_13, i16 1, i16 -1" [svm.cpp:69]   --->   Operation 126 'select' 'storemerge_cast_cast' <Predicate = (exitcond1)> <Delay = 0.99> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %class_hw, i16 %storemerge_cast_cast) nounwind" [svm.cpp:69]   --->   Operation 127 'write' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "ret void" [svm.cpp:71]   --->   Operation 128 'ret' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.54>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%norm = phi float [ 0.000000e+00, %2 ], [ %norm_1_8, %4 ]" [svm.cpp:36]   --->   Operation 129 'phi' 'norm' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "%j = phi i5 [ 0, %2 ], [ %j_1_8, %4 ]" [svm.cpp:32]   --->   Operation 130 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind"   --->   Operation 131 'speclooptripcount' 'empty_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (1.36ns)   --->   "%exitcond = icmp eq i5 %j, -14" [svm.cpp:32]   --->   Operation 132 'icmp' 'exitcond' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %5, label %4" [svm.cpp:32]   --->   Operation 133 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_s = zext i5 %j to i64" [svm.cpp:35]   --->   Operation 134 'zext' 'tmp_s' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_cast = zext i5 %j to i16" [svm.cpp:35]   --->   Operation 135 'zext' 'tmp_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] (2.07ns)   --->   "%tmp_17 = add i16 %tmp_16, %tmp_cast" [svm.cpp:35]   --->   Operation 136 'add' 'tmp_17' <Predicate = (!exitcond)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_17_cast = zext i16 %tmp_17 to i64" [svm.cpp:35]   --->   Operation 137 'zext' 'tmp_17_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] (0.00ns)   --->   "%SupVec_addr = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_17_cast" [svm.cpp:35]   --->   Operation 138 'getelementptr' 'SupVec_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 139 [1/1] (0.00ns)   --->   "%x_addr = getelementptr [18 x float]* %x, i64 0, i64 %tmp_s" [svm.cpp:35]   --->   Operation 139 'getelementptr' 'x_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 140 [2/2] (2.32ns)   --->   "%x_load = load float* %x_addr, align 4" [svm.cpp:35]   --->   Operation 140 'load' 'x_load' <Predicate = (!exitcond)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_3 : Operation 141 [2/2] (3.25ns)   --->   "%SupVec_load = load float* %SupVec_addr, align 4" [svm.cpp:35]   --->   Operation 141 'load' 'SupVec_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "%Co_addr = getelementptr inbounds [1222 x float]* @Co, i64 0, i64 %tmp_1" [svm.cpp:66]   --->   Operation 142 'getelementptr' 'Co_addr' <Predicate = (exitcond)> <Delay = 0.00>
+ST_3 : Operation 143 [2/2] (3.25ns)   --->   "%Co_load = load float* %Co_addr, align 4" [svm.cpp:66]   --->   Operation 143 'load' 'Co_load' <Predicate = (exitcond)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+ST_3 : Operation 144 [1/1] (5.54ns)   --->   "%tmp_3_11 = fpext float %norm to double" [svm.cpp:66]   --->   Operation 144 'fpext' 'tmp_3_11' <Predicate = (exitcond)> <Delay = 5.54> <Core = "Float2Double">   --->   Core 108 'Float2Double' <Latency = 0> <II = 1> <Delay = 5.54> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 145 [1/2] (2.32ns)   --->   "%x_load = load float* %x_addr, align 4" [svm.cpp:35]   --->   Operation 145 'load' 'x_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_4 : Operation 146 [1/2] (3.25ns)   --->   "%SupVec_load = load float* %SupVec_addr, align 4" [svm.cpp:35]   --->   Operation 146 'load' 'SupVec_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 5 <SV = 4> <Delay = 7.25>
+ST_5 : Operation 147 [5/5] (7.25ns)   --->   "%dif = fsub float %x_load, %SupVec_load" [svm.cpp:35]   --->   Operation 147 'fsub' 'dif' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 148 [4/5] (7.25ns)   --->   "%dif = fsub float %x_load, %SupVec_load" [svm.cpp:35]   --->   Operation 148 'fsub' 'dif' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 149 [3/5] (7.25ns)   --->   "%dif = fsub float %x_load, %SupVec_load" [svm.cpp:35]   --->   Operation 149 'fsub' 'dif' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 150 [2/5] (7.25ns)   --->   "%dif = fsub float %x_load, %SupVec_load" [svm.cpp:35]   --->   Operation 150 'fsub' 'dif' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 151 [1/1] (1.78ns)   --->   "%j_1 = add i5 %j, 1" [svm.cpp:32]   --->   Operation 151 'add' 'j_1' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_1_5 = zext i5 %j_1 to i64" [svm.cpp:35]   --->   Operation 152 'zext' 'tmp_1_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 153 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i5 %j_1 to i16" [svm.cpp:35]   --->   Operation 153 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 154 [1/1] (2.07ns)   --->   "%tmp_18 = add i16 %tmp_16, %tmp_1_cast" [svm.cpp:35]   --->   Operation 154 'add' 'tmp_18' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 155 [1/1] (0.00ns)   --->   "%tmp_18_cast = zext i16 %tmp_18 to i64" [svm.cpp:35]   --->   Operation 155 'zext' 'tmp_18_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 156 [1/1] (0.00ns)   --->   "%SupVec_addr_1 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_18_cast" [svm.cpp:35]   --->   Operation 156 'getelementptr' 'SupVec_addr_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 157 [1/1] (0.00ns)   --->   "%x_addr_1 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_1_5" [svm.cpp:35]   --->   Operation 157 'getelementptr' 'x_addr_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 158 [2/2] (2.32ns)   --->   "%x_load_1 = load float* %x_addr_1, align 4" [svm.cpp:35]   --->   Operation 158 'load' 'x_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_8 : Operation 159 [2/2] (3.25ns)   --->   "%SupVec_load_1 = load float* %SupVec_addr_1, align 4" [svm.cpp:35]   --->   Operation 159 'load' 'SupVec_load_1' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 160 [1/5] (7.25ns)   --->   "%dif = fsub float %x_load, %SupVec_load" [svm.cpp:35]   --->   Operation 160 'fsub' 'dif' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 161 [1/2] (2.32ns)   --->   "%x_load_1 = load float* %x_addr_1, align 4" [svm.cpp:35]   --->   Operation 161 'load' 'x_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_9 : Operation 162 [1/2] (3.25ns)   --->   "%SupVec_load_1 = load float* %SupVec_addr_1, align 4" [svm.cpp:35]   --->   Operation 162 'load' 'SupVec_load_1' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 163 [4/4] (5.70ns)   --->   "%tmp_9 = fmul float %dif, %dif" [svm.cpp:36]   --->   Operation 163 'fmul' 'tmp_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 164 [5/5] (7.25ns)   --->   "%dif_1 = fsub float %x_load_1, %SupVec_load_1" [svm.cpp:35]   --->   Operation 164 'fsub' 'dif_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 165 [3/4] (5.70ns)   --->   "%tmp_9 = fmul float %dif, %dif" [svm.cpp:36]   --->   Operation 165 'fmul' 'tmp_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 166 [4/5] (7.25ns)   --->   "%dif_1 = fsub float %x_load_1, %SupVec_load_1" [svm.cpp:35]   --->   Operation 166 'fsub' 'dif_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.25>
+ST_12 : Operation 167 [2/4] (5.70ns)   --->   "%tmp_9 = fmul float %dif, %dif" [svm.cpp:36]   --->   Operation 167 'fmul' 'tmp_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 168 [3/5] (7.25ns)   --->   "%dif_1 = fsub float %x_load_1, %SupVec_load_1" [svm.cpp:35]   --->   Operation 168 'fsub' 'dif_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 169 [1/4] (5.70ns)   --->   "%tmp_9 = fmul float %dif, %dif" [svm.cpp:36]   --->   Operation 169 'fmul' 'tmp_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 170 [2/5] (7.25ns)   --->   "%dif_1 = fsub float %x_load_1, %SupVec_load_1" [svm.cpp:35]   --->   Operation 170 'fsub' 'dif_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 171 [1/1] (1.78ns)   --->   "%j_1_1 = add i5 %j, 2" [svm.cpp:32]   --->   Operation 171 'add' 'j_1_1' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_2 = zext i5 %j_1_1 to i64" [svm.cpp:35]   --->   Operation 172 'zext' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 173 [1/1] (0.00ns)   --->   "%tmp_2_cast = zext i5 %j_1_1 to i16" [svm.cpp:35]   --->   Operation 173 'zext' 'tmp_2_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 174 [1/1] (2.07ns)   --->   "%tmp_19 = add i16 %tmp_16, %tmp_2_cast" [svm.cpp:35]   --->   Operation 174 'add' 'tmp_19' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_19_cast = zext i16 %tmp_19 to i64" [svm.cpp:35]   --->   Operation 175 'zext' 'tmp_19_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 176 [1/1] (0.00ns)   --->   "%SupVec_addr_2 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_19_cast" [svm.cpp:35]   --->   Operation 176 'getelementptr' 'SupVec_addr_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 177 [1/1] (0.00ns)   --->   "%x_addr_2 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_2" [svm.cpp:35]   --->   Operation 177 'getelementptr' 'x_addr_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 178 [2/2] (2.32ns)   --->   "%x_load_2 = load float* %x_addr_2, align 4" [svm.cpp:35]   --->   Operation 178 'load' 'x_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_13 : Operation 179 [2/2] (3.25ns)   --->   "%SupVec_load_2 = load float* %SupVec_addr_2, align 4" [svm.cpp:35]   --->   Operation 179 'load' 'SupVec_load_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 180 [5/5] (7.25ns)   --->   "%norm_1 = fadd float %norm, %tmp_9" [svm.cpp:36]   --->   Operation 180 'fadd' 'norm_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 181 [1/5] (7.25ns)   --->   "%dif_1 = fsub float %x_load_1, %SupVec_load_1" [svm.cpp:35]   --->   Operation 181 'fsub' 'dif_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 182 [1/2] (2.32ns)   --->   "%x_load_2 = load float* %x_addr_2, align 4" [svm.cpp:35]   --->   Operation 182 'load' 'x_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_14 : Operation 183 [1/2] (3.25ns)   --->   "%SupVec_load_2 = load float* %SupVec_addr_2, align 4" [svm.cpp:35]   --->   Operation 183 'load' 'SupVec_load_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 184 [4/5] (7.25ns)   --->   "%norm_1 = fadd float %norm, %tmp_9" [svm.cpp:36]   --->   Operation 184 'fadd' 'norm_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 185 [4/4] (5.70ns)   --->   "%tmp_8_1 = fmul float %dif_1, %dif_1" [svm.cpp:36]   --->   Operation 185 'fmul' 'tmp_8_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 186 [5/5] (7.25ns)   --->   "%dif_2 = fsub float %x_load_2, %SupVec_load_2" [svm.cpp:35]   --->   Operation 186 'fsub' 'dif_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.25>
+ST_16 : Operation 187 [3/5] (7.25ns)   --->   "%norm_1 = fadd float %norm, %tmp_9" [svm.cpp:36]   --->   Operation 187 'fadd' 'norm_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 188 [3/4] (5.70ns)   --->   "%tmp_8_1 = fmul float %dif_1, %dif_1" [svm.cpp:36]   --->   Operation 188 'fmul' 'tmp_8_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 189 [4/5] (7.25ns)   --->   "%dif_2 = fsub float %x_load_2, %SupVec_load_2" [svm.cpp:35]   --->   Operation 189 'fsub' 'dif_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 7.25>
+ST_17 : Operation 190 [2/5] (7.25ns)   --->   "%norm_1 = fadd float %norm, %tmp_9" [svm.cpp:36]   --->   Operation 190 'fadd' 'norm_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 191 [2/4] (5.70ns)   --->   "%tmp_8_1 = fmul float %dif_1, %dif_1" [svm.cpp:36]   --->   Operation 191 'fmul' 'tmp_8_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 192 [3/5] (7.25ns)   --->   "%dif_2 = fsub float %x_load_2, %SupVec_load_2" [svm.cpp:35]   --->   Operation 192 'fsub' 'dif_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.25>
+ST_18 : Operation 193 [1/5] (7.25ns)   --->   "%norm_1 = fadd float %norm, %tmp_9" [svm.cpp:36]   --->   Operation 193 'fadd' 'norm_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 194 [1/4] (5.70ns)   --->   "%tmp_8_1 = fmul float %dif_1, %dif_1" [svm.cpp:36]   --->   Operation 194 'fmul' 'tmp_8_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 195 [2/5] (7.25ns)   --->   "%dif_2 = fsub float %x_load_2, %SupVec_load_2" [svm.cpp:35]   --->   Operation 195 'fsub' 'dif_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 196 [1/1] (1.78ns)   --->   "%j_1_2 = add i5 %j, 3" [svm.cpp:32]   --->   Operation 196 'add' 'j_1_2' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 197 [1/1] (0.00ns)   --->   "%tmp_3 = zext i5 %j_1_2 to i64" [svm.cpp:35]   --->   Operation 197 'zext' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 198 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i5 %j_1_2 to i16" [svm.cpp:35]   --->   Operation 198 'zext' 'tmp_3_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 199 [1/1] (2.07ns)   --->   "%tmp_20 = add i16 %tmp_16, %tmp_3_cast" [svm.cpp:35]   --->   Operation 199 'add' 'tmp_20' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 200 [1/1] (0.00ns)   --->   "%tmp_20_cast = zext i16 %tmp_20 to i64" [svm.cpp:35]   --->   Operation 200 'zext' 'tmp_20_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 201 [1/1] (0.00ns)   --->   "%SupVec_addr_3 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_20_cast" [svm.cpp:35]   --->   Operation 201 'getelementptr' 'SupVec_addr_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 202 [1/1] (0.00ns)   --->   "%x_addr_3 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_3" [svm.cpp:35]   --->   Operation 202 'getelementptr' 'x_addr_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 203 [2/2] (2.32ns)   --->   "%x_load_3 = load float* %x_addr_3, align 4" [svm.cpp:35]   --->   Operation 203 'load' 'x_load_3' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_18 : Operation 204 [2/2] (3.25ns)   --->   "%SupVec_load_3 = load float* %SupVec_addr_3, align 4" [svm.cpp:35]   --->   Operation 204 'load' 'SupVec_load_3' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 19 <SV = 18> <Delay = 7.25>
+ST_19 : Operation 205 [5/5] (7.25ns)   --->   "%norm_1_1 = fadd float %norm_1, %tmp_8_1" [svm.cpp:36]   --->   Operation 205 'fadd' 'norm_1_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 206 [1/5] (7.25ns)   --->   "%dif_2 = fsub float %x_load_2, %SupVec_load_2" [svm.cpp:35]   --->   Operation 206 'fsub' 'dif_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 207 [1/2] (2.32ns)   --->   "%x_load_3 = load float* %x_addr_3, align 4" [svm.cpp:35]   --->   Operation 207 'load' 'x_load_3' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_19 : Operation 208 [1/2] (3.25ns)   --->   "%SupVec_load_3 = load float* %SupVec_addr_3, align 4" [svm.cpp:35]   --->   Operation 208 'load' 'SupVec_load_3' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 20 <SV = 19> <Delay = 7.25>
+ST_20 : Operation 209 [4/5] (7.25ns)   --->   "%norm_1_1 = fadd float %norm_1, %tmp_8_1" [svm.cpp:36]   --->   Operation 209 'fadd' 'norm_1_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 210 [4/4] (5.70ns)   --->   "%tmp_8_2 = fmul float %dif_2, %dif_2" [svm.cpp:36]   --->   Operation 210 'fmul' 'tmp_8_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 211 [5/5] (7.25ns)   --->   "%dif_3 = fsub float %x_load_3, %SupVec_load_3" [svm.cpp:35]   --->   Operation 211 'fsub' 'dif_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 7.25>
+ST_21 : Operation 212 [3/5] (7.25ns)   --->   "%norm_1_1 = fadd float %norm_1, %tmp_8_1" [svm.cpp:36]   --->   Operation 212 'fadd' 'norm_1_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 213 [3/4] (5.70ns)   --->   "%tmp_8_2 = fmul float %dif_2, %dif_2" [svm.cpp:36]   --->   Operation 213 'fmul' 'tmp_8_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 214 [4/5] (7.25ns)   --->   "%dif_3 = fsub float %x_load_3, %SupVec_load_3" [svm.cpp:35]   --->   Operation 214 'fsub' 'dif_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 7.25>
+ST_22 : Operation 215 [2/5] (7.25ns)   --->   "%norm_1_1 = fadd float %norm_1, %tmp_8_1" [svm.cpp:36]   --->   Operation 215 'fadd' 'norm_1_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 216 [2/4] (5.70ns)   --->   "%tmp_8_2 = fmul float %dif_2, %dif_2" [svm.cpp:36]   --->   Operation 216 'fmul' 'tmp_8_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 217 [3/5] (7.25ns)   --->   "%dif_3 = fsub float %x_load_3, %SupVec_load_3" [svm.cpp:35]   --->   Operation 217 'fsub' 'dif_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.25>
+ST_23 : Operation 218 [1/5] (7.25ns)   --->   "%norm_1_1 = fadd float %norm_1, %tmp_8_1" [svm.cpp:36]   --->   Operation 218 'fadd' 'norm_1_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 219 [1/4] (5.70ns)   --->   "%tmp_8_2 = fmul float %dif_2, %dif_2" [svm.cpp:36]   --->   Operation 219 'fmul' 'tmp_8_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 220 [2/5] (7.25ns)   --->   "%dif_3 = fsub float %x_load_3, %SupVec_load_3" [svm.cpp:35]   --->   Operation 220 'fsub' 'dif_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 221 [1/1] (1.78ns)   --->   "%j_1_3 = add i5 %j, 4" [svm.cpp:32]   --->   Operation 221 'add' 'j_1_3' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 222 [1/1] (0.00ns)   --->   "%tmp_4 = zext i5 %j_1_3 to i64" [svm.cpp:35]   --->   Operation 222 'zext' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 223 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i5 %j_1_3 to i16" [svm.cpp:35]   --->   Operation 223 'zext' 'tmp_4_cast' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 224 [1/1] (2.07ns)   --->   "%tmp_21 = add i16 %tmp_16, %tmp_4_cast" [svm.cpp:35]   --->   Operation 224 'add' 'tmp_21' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 225 [1/1] (0.00ns)   --->   "%tmp_21_cast = zext i16 %tmp_21 to i64" [svm.cpp:35]   --->   Operation 225 'zext' 'tmp_21_cast' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 226 [1/1] (0.00ns)   --->   "%SupVec_addr_4 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_21_cast" [svm.cpp:35]   --->   Operation 226 'getelementptr' 'SupVec_addr_4' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 227 [1/1] (0.00ns)   --->   "%x_addr_4 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_4" [svm.cpp:35]   --->   Operation 227 'getelementptr' 'x_addr_4' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 228 [2/2] (2.32ns)   --->   "%x_load_4 = load float* %x_addr_4, align 4" [svm.cpp:35]   --->   Operation 228 'load' 'x_load_4' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_23 : Operation 229 [2/2] (3.25ns)   --->   "%SupVec_load_4 = load float* %SupVec_addr_4, align 4" [svm.cpp:35]   --->   Operation 229 'load' 'SupVec_load_4' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 24 <SV = 23> <Delay = 7.25>
+ST_24 : Operation 230 [5/5] (7.25ns)   --->   "%norm_1_2 = fadd float %norm_1_1, %tmp_8_2" [svm.cpp:36]   --->   Operation 230 'fadd' 'norm_1_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 231 [1/5] (7.25ns)   --->   "%dif_3 = fsub float %x_load_3, %SupVec_load_3" [svm.cpp:35]   --->   Operation 231 'fsub' 'dif_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 232 [1/2] (2.32ns)   --->   "%x_load_4 = load float* %x_addr_4, align 4" [svm.cpp:35]   --->   Operation 232 'load' 'x_load_4' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_24 : Operation 233 [1/2] (3.25ns)   --->   "%SupVec_load_4 = load float* %SupVec_addr_4, align 4" [svm.cpp:35]   --->   Operation 233 'load' 'SupVec_load_4' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 25 <SV = 24> <Delay = 7.25>
+ST_25 : Operation 234 [4/5] (7.25ns)   --->   "%norm_1_2 = fadd float %norm_1_1, %tmp_8_2" [svm.cpp:36]   --->   Operation 234 'fadd' 'norm_1_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 235 [4/4] (5.70ns)   --->   "%tmp_8_3 = fmul float %dif_3, %dif_3" [svm.cpp:36]   --->   Operation 235 'fmul' 'tmp_8_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 236 [5/5] (7.25ns)   --->   "%dif_4 = fsub float %x_load_4, %SupVec_load_4" [svm.cpp:35]   --->   Operation 236 'fsub' 'dif_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.25>
+ST_26 : Operation 237 [3/5] (7.25ns)   --->   "%norm_1_2 = fadd float %norm_1_1, %tmp_8_2" [svm.cpp:36]   --->   Operation 237 'fadd' 'norm_1_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 238 [3/4] (5.70ns)   --->   "%tmp_8_3 = fmul float %dif_3, %dif_3" [svm.cpp:36]   --->   Operation 238 'fmul' 'tmp_8_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 239 [4/5] (7.25ns)   --->   "%dif_4 = fsub float %x_load_4, %SupVec_load_4" [svm.cpp:35]   --->   Operation 239 'fsub' 'dif_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 7.25>
+ST_27 : Operation 240 [2/5] (7.25ns)   --->   "%norm_1_2 = fadd float %norm_1_1, %tmp_8_2" [svm.cpp:36]   --->   Operation 240 'fadd' 'norm_1_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 241 [2/4] (5.70ns)   --->   "%tmp_8_3 = fmul float %dif_3, %dif_3" [svm.cpp:36]   --->   Operation 241 'fmul' 'tmp_8_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 242 [3/5] (7.25ns)   --->   "%dif_4 = fsub float %x_load_4, %SupVec_load_4" [svm.cpp:35]   --->   Operation 242 'fsub' 'dif_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 7.25>
+ST_28 : Operation 243 [1/5] (7.25ns)   --->   "%norm_1_2 = fadd float %norm_1_1, %tmp_8_2" [svm.cpp:36]   --->   Operation 243 'fadd' 'norm_1_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 244 [1/4] (5.70ns)   --->   "%tmp_8_3 = fmul float %dif_3, %dif_3" [svm.cpp:36]   --->   Operation 244 'fmul' 'tmp_8_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 245 [2/5] (7.25ns)   --->   "%dif_4 = fsub float %x_load_4, %SupVec_load_4" [svm.cpp:35]   --->   Operation 245 'fsub' 'dif_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 246 [1/1] (1.78ns)   --->   "%j_1_4 = add i5 %j, 5" [svm.cpp:32]   --->   Operation 246 'add' 'j_1_4' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 247 [1/1] (0.00ns)   --->   "%tmp_5 = zext i5 %j_1_4 to i64" [svm.cpp:35]   --->   Operation 247 'zext' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 248 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i5 %j_1_4 to i16" [svm.cpp:35]   --->   Operation 248 'zext' 'tmp_5_cast' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 249 [1/1] (2.07ns)   --->   "%tmp_22 = add i16 %tmp_16, %tmp_5_cast" [svm.cpp:35]   --->   Operation 249 'add' 'tmp_22' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 250 [1/1] (0.00ns)   --->   "%tmp_22_cast = zext i16 %tmp_22 to i64" [svm.cpp:35]   --->   Operation 250 'zext' 'tmp_22_cast' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 251 [1/1] (0.00ns)   --->   "%SupVec_addr_5 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_22_cast" [svm.cpp:35]   --->   Operation 251 'getelementptr' 'SupVec_addr_5' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 252 [1/1] (0.00ns)   --->   "%x_addr_5 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_5" [svm.cpp:35]   --->   Operation 252 'getelementptr' 'x_addr_5' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 253 [2/2] (2.32ns)   --->   "%x_load_5 = load float* %x_addr_5, align 4" [svm.cpp:35]   --->   Operation 253 'load' 'x_load_5' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_28 : Operation 254 [2/2] (3.25ns)   --->   "%SupVec_load_5 = load float* %SupVec_addr_5, align 4" [svm.cpp:35]   --->   Operation 254 'load' 'SupVec_load_5' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 29 <SV = 28> <Delay = 7.25>
+ST_29 : Operation 255 [5/5] (7.25ns)   --->   "%norm_1_3 = fadd float %norm_1_2, %tmp_8_3" [svm.cpp:36]   --->   Operation 255 'fadd' 'norm_1_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 256 [1/5] (7.25ns)   --->   "%dif_4 = fsub float %x_load_4, %SupVec_load_4" [svm.cpp:35]   --->   Operation 256 'fsub' 'dif_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 257 [1/2] (2.32ns)   --->   "%x_load_5 = load float* %x_addr_5, align 4" [svm.cpp:35]   --->   Operation 257 'load' 'x_load_5' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_29 : Operation 258 [1/2] (3.25ns)   --->   "%SupVec_load_5 = load float* %SupVec_addr_5, align 4" [svm.cpp:35]   --->   Operation 258 'load' 'SupVec_load_5' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 30 <SV = 29> <Delay = 7.25>
+ST_30 : Operation 259 [4/5] (7.25ns)   --->   "%norm_1_3 = fadd float %norm_1_2, %tmp_8_3" [svm.cpp:36]   --->   Operation 259 'fadd' 'norm_1_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 260 [4/4] (5.70ns)   --->   "%tmp_8_4 = fmul float %dif_4, %dif_4" [svm.cpp:36]   --->   Operation 260 'fmul' 'tmp_8_4' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 261 [5/5] (7.25ns)   --->   "%dif_5 = fsub float %x_load_5, %SupVec_load_5" [svm.cpp:35]   --->   Operation 261 'fsub' 'dif_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 7.25>
+ST_31 : Operation 262 [3/5] (7.25ns)   --->   "%norm_1_3 = fadd float %norm_1_2, %tmp_8_3" [svm.cpp:36]   --->   Operation 262 'fadd' 'norm_1_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 263 [3/4] (5.70ns)   --->   "%tmp_8_4 = fmul float %dif_4, %dif_4" [svm.cpp:36]   --->   Operation 263 'fmul' 'tmp_8_4' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 264 [4/5] (7.25ns)   --->   "%dif_5 = fsub float %x_load_5, %SupVec_load_5" [svm.cpp:35]   --->   Operation 264 'fsub' 'dif_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 7.25>
+ST_32 : Operation 265 [2/5] (7.25ns)   --->   "%norm_1_3 = fadd float %norm_1_2, %tmp_8_3" [svm.cpp:36]   --->   Operation 265 'fadd' 'norm_1_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 266 [2/4] (5.70ns)   --->   "%tmp_8_4 = fmul float %dif_4, %dif_4" [svm.cpp:36]   --->   Operation 266 'fmul' 'tmp_8_4' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 267 [3/5] (7.25ns)   --->   "%dif_5 = fsub float %x_load_5, %SupVec_load_5" [svm.cpp:35]   --->   Operation 267 'fsub' 'dif_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 7.25>
+ST_33 : Operation 268 [1/5] (7.25ns)   --->   "%norm_1_3 = fadd float %norm_1_2, %tmp_8_3" [svm.cpp:36]   --->   Operation 268 'fadd' 'norm_1_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 269 [1/4] (5.70ns)   --->   "%tmp_8_4 = fmul float %dif_4, %dif_4" [svm.cpp:36]   --->   Operation 269 'fmul' 'tmp_8_4' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 270 [2/5] (7.25ns)   --->   "%dif_5 = fsub float %x_load_5, %SupVec_load_5" [svm.cpp:35]   --->   Operation 270 'fsub' 'dif_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 271 [1/1] (1.78ns)   --->   "%j_1_5 = add i5 %j, 6" [svm.cpp:32]   --->   Operation 271 'add' 'j_1_5' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 272 [1/1] (0.00ns)   --->   "%tmp_6 = zext i5 %j_1_5 to i64" [svm.cpp:35]   --->   Operation 272 'zext' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 273 [1/1] (0.00ns)   --->   "%tmp_6_cast = zext i5 %j_1_5 to i16" [svm.cpp:35]   --->   Operation 273 'zext' 'tmp_6_cast' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 274 [1/1] (2.07ns)   --->   "%tmp_23 = add i16 %tmp_16, %tmp_6_cast" [svm.cpp:35]   --->   Operation 274 'add' 'tmp_23' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 275 [1/1] (0.00ns)   --->   "%tmp_23_cast = zext i16 %tmp_23 to i64" [svm.cpp:35]   --->   Operation 275 'zext' 'tmp_23_cast' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 276 [1/1] (0.00ns)   --->   "%SupVec_addr_6 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_23_cast" [svm.cpp:35]   --->   Operation 276 'getelementptr' 'SupVec_addr_6' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 277 [1/1] (0.00ns)   --->   "%x_addr_6 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_6" [svm.cpp:35]   --->   Operation 277 'getelementptr' 'x_addr_6' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 278 [2/2] (2.32ns)   --->   "%x_load_6 = load float* %x_addr_6, align 4" [svm.cpp:35]   --->   Operation 278 'load' 'x_load_6' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_33 : Operation 279 [2/2] (3.25ns)   --->   "%SupVec_load_6 = load float* %SupVec_addr_6, align 4" [svm.cpp:35]   --->   Operation 279 'load' 'SupVec_load_6' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 34 <SV = 33> <Delay = 7.25>
+ST_34 : Operation 280 [5/5] (7.25ns)   --->   "%norm_1_4 = fadd float %norm_1_3, %tmp_8_4" [svm.cpp:36]   --->   Operation 280 'fadd' 'norm_1_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 281 [1/5] (7.25ns)   --->   "%dif_5 = fsub float %x_load_5, %SupVec_load_5" [svm.cpp:35]   --->   Operation 281 'fsub' 'dif_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 282 [1/2] (2.32ns)   --->   "%x_load_6 = load float* %x_addr_6, align 4" [svm.cpp:35]   --->   Operation 282 'load' 'x_load_6' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_34 : Operation 283 [1/2] (3.25ns)   --->   "%SupVec_load_6 = load float* %SupVec_addr_6, align 4" [svm.cpp:35]   --->   Operation 283 'load' 'SupVec_load_6' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 35 <SV = 34> <Delay = 7.25>
+ST_35 : Operation 284 [4/5] (7.25ns)   --->   "%norm_1_4 = fadd float %norm_1_3, %tmp_8_4" [svm.cpp:36]   --->   Operation 284 'fadd' 'norm_1_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 285 [4/4] (5.70ns)   --->   "%tmp_8_5 = fmul float %dif_5, %dif_5" [svm.cpp:36]   --->   Operation 285 'fmul' 'tmp_8_5' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 286 [5/5] (7.25ns)   --->   "%dif_6 = fsub float %x_load_6, %SupVec_load_6" [svm.cpp:35]   --->   Operation 286 'fsub' 'dif_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 7.25>
+ST_36 : Operation 287 [3/5] (7.25ns)   --->   "%norm_1_4 = fadd float %norm_1_3, %tmp_8_4" [svm.cpp:36]   --->   Operation 287 'fadd' 'norm_1_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 288 [3/4] (5.70ns)   --->   "%tmp_8_5 = fmul float %dif_5, %dif_5" [svm.cpp:36]   --->   Operation 288 'fmul' 'tmp_8_5' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 289 [4/5] (7.25ns)   --->   "%dif_6 = fsub float %x_load_6, %SupVec_load_6" [svm.cpp:35]   --->   Operation 289 'fsub' 'dif_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 7.25>
+ST_37 : Operation 290 [2/5] (7.25ns)   --->   "%norm_1_4 = fadd float %norm_1_3, %tmp_8_4" [svm.cpp:36]   --->   Operation 290 'fadd' 'norm_1_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 291 [2/4] (5.70ns)   --->   "%tmp_8_5 = fmul float %dif_5, %dif_5" [svm.cpp:36]   --->   Operation 291 'fmul' 'tmp_8_5' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 292 [3/5] (7.25ns)   --->   "%dif_6 = fsub float %x_load_6, %SupVec_load_6" [svm.cpp:35]   --->   Operation 292 'fsub' 'dif_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 7.25>
+ST_38 : Operation 293 [1/5] (7.25ns)   --->   "%norm_1_4 = fadd float %norm_1_3, %tmp_8_4" [svm.cpp:36]   --->   Operation 293 'fadd' 'norm_1_4' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 294 [1/4] (5.70ns)   --->   "%tmp_8_5 = fmul float %dif_5, %dif_5" [svm.cpp:36]   --->   Operation 294 'fmul' 'tmp_8_5' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 295 [2/5] (7.25ns)   --->   "%dif_6 = fsub float %x_load_6, %SupVec_load_6" [svm.cpp:35]   --->   Operation 295 'fsub' 'dif_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 296 [1/1] (1.78ns)   --->   "%j_1_6 = add i5 %j, 7" [svm.cpp:32]   --->   Operation 296 'add' 'j_1_6' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 297 [1/1] (0.00ns)   --->   "%tmp_7 = zext i5 %j_1_6 to i64" [svm.cpp:35]   --->   Operation 297 'zext' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 298 [1/1] (0.00ns)   --->   "%tmp_7_cast = zext i5 %j_1_6 to i16" [svm.cpp:35]   --->   Operation 298 'zext' 'tmp_7_cast' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 299 [1/1] (2.07ns)   --->   "%tmp_24 = add i16 %tmp_16, %tmp_7_cast" [svm.cpp:35]   --->   Operation 299 'add' 'tmp_24' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 300 [1/1] (0.00ns)   --->   "%tmp_24_cast = zext i16 %tmp_24 to i64" [svm.cpp:35]   --->   Operation 300 'zext' 'tmp_24_cast' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 301 [1/1] (0.00ns)   --->   "%SupVec_addr_7 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_24_cast" [svm.cpp:35]   --->   Operation 301 'getelementptr' 'SupVec_addr_7' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 302 [1/1] (0.00ns)   --->   "%x_addr_7 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_7" [svm.cpp:35]   --->   Operation 302 'getelementptr' 'x_addr_7' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 303 [2/2] (2.32ns)   --->   "%x_load_7 = load float* %x_addr_7, align 4" [svm.cpp:35]   --->   Operation 303 'load' 'x_load_7' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_38 : Operation 304 [2/2] (3.25ns)   --->   "%SupVec_load_7 = load float* %SupVec_addr_7, align 4" [svm.cpp:35]   --->   Operation 304 'load' 'SupVec_load_7' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 39 <SV = 38> <Delay = 7.25>
+ST_39 : Operation 305 [5/5] (7.25ns)   --->   "%norm_1_5 = fadd float %norm_1_4, %tmp_8_5" [svm.cpp:36]   --->   Operation 305 'fadd' 'norm_1_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 306 [1/5] (7.25ns)   --->   "%dif_6 = fsub float %x_load_6, %SupVec_load_6" [svm.cpp:35]   --->   Operation 306 'fsub' 'dif_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 307 [1/2] (2.32ns)   --->   "%x_load_7 = load float* %x_addr_7, align 4" [svm.cpp:35]   --->   Operation 307 'load' 'x_load_7' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_39 : Operation 308 [1/2] (3.25ns)   --->   "%SupVec_load_7 = load float* %SupVec_addr_7, align 4" [svm.cpp:35]   --->   Operation 308 'load' 'SupVec_load_7' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 40 <SV = 39> <Delay = 7.25>
+ST_40 : Operation 309 [4/5] (7.25ns)   --->   "%norm_1_5 = fadd float %norm_1_4, %tmp_8_5" [svm.cpp:36]   --->   Operation 309 'fadd' 'norm_1_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 310 [4/4] (5.70ns)   --->   "%tmp_8_6 = fmul float %dif_6, %dif_6" [svm.cpp:36]   --->   Operation 310 'fmul' 'tmp_8_6' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 311 [5/5] (7.25ns)   --->   "%dif_7 = fsub float %x_load_7, %SupVec_load_7" [svm.cpp:35]   --->   Operation 311 'fsub' 'dif_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 7.25>
+ST_41 : Operation 312 [3/5] (7.25ns)   --->   "%norm_1_5 = fadd float %norm_1_4, %tmp_8_5" [svm.cpp:36]   --->   Operation 312 'fadd' 'norm_1_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 313 [3/4] (5.70ns)   --->   "%tmp_8_6 = fmul float %dif_6, %dif_6" [svm.cpp:36]   --->   Operation 313 'fmul' 'tmp_8_6' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 314 [4/5] (7.25ns)   --->   "%dif_7 = fsub float %x_load_7, %SupVec_load_7" [svm.cpp:35]   --->   Operation 314 'fsub' 'dif_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 7.25>
+ST_42 : Operation 315 [2/5] (7.25ns)   --->   "%norm_1_5 = fadd float %norm_1_4, %tmp_8_5" [svm.cpp:36]   --->   Operation 315 'fadd' 'norm_1_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 316 [2/4] (5.70ns)   --->   "%tmp_8_6 = fmul float %dif_6, %dif_6" [svm.cpp:36]   --->   Operation 316 'fmul' 'tmp_8_6' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 317 [3/5] (7.25ns)   --->   "%dif_7 = fsub float %x_load_7, %SupVec_load_7" [svm.cpp:35]   --->   Operation 317 'fsub' 'dif_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 7.25>
+ST_43 : Operation 318 [1/5] (7.25ns)   --->   "%norm_1_5 = fadd float %norm_1_4, %tmp_8_5" [svm.cpp:36]   --->   Operation 318 'fadd' 'norm_1_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 319 [1/4] (5.70ns)   --->   "%tmp_8_6 = fmul float %dif_6, %dif_6" [svm.cpp:36]   --->   Operation 319 'fmul' 'tmp_8_6' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 320 [2/5] (7.25ns)   --->   "%dif_7 = fsub float %x_load_7, %SupVec_load_7" [svm.cpp:35]   --->   Operation 320 'fsub' 'dif_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 321 [1/1] (1.78ns)   --->   "%j_1_7 = add i5 %j, 8" [svm.cpp:32]   --->   Operation 321 'add' 'j_1_7' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 322 [1/1] (0.00ns)   --->   "%tmp_8_8 = zext i5 %j_1_7 to i64" [svm.cpp:35]   --->   Operation 322 'zext' 'tmp_8_8' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 323 [1/1] (0.00ns)   --->   "%tmp_8_cast = zext i5 %j_1_7 to i16" [svm.cpp:35]   --->   Operation 323 'zext' 'tmp_8_cast' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 324 [1/1] (2.07ns)   --->   "%tmp_25 = add i16 %tmp_16, %tmp_8_cast" [svm.cpp:35]   --->   Operation 324 'add' 'tmp_25' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_25_cast = zext i16 %tmp_25 to i64" [svm.cpp:35]   --->   Operation 325 'zext' 'tmp_25_cast' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 326 [1/1] (0.00ns)   --->   "%SupVec_addr_8 = getelementptr [21996 x float]* @SupVec, i64 0, i64 %tmp_25_cast" [svm.cpp:35]   --->   Operation 326 'getelementptr' 'SupVec_addr_8' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 327 [1/1] (0.00ns)   --->   "%x_addr_8 = getelementptr [18 x float]* %x, i64 0, i64 %tmp_8_8" [svm.cpp:35]   --->   Operation 327 'getelementptr' 'x_addr_8' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 328 [2/2] (2.32ns)   --->   "%x_load_8 = load float* %x_addr_8, align 4" [svm.cpp:35]   --->   Operation 328 'load' 'x_load_8' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_43 : Operation 329 [2/2] (3.25ns)   --->   "%SupVec_load_8 = load float* %SupVec_addr_8, align 4" [svm.cpp:35]   --->   Operation 329 'load' 'SupVec_load_8' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+ST_43 : Operation 330 [1/1] (1.78ns)   --->   "%j_1_8 = add i5 %j, 9" [svm.cpp:32]   --->   Operation 330 'add' 'j_1_8' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 7.25>
+ST_44 : Operation 331 [5/5] (7.25ns)   --->   "%norm_1_6 = fadd float %norm_1_5, %tmp_8_6" [svm.cpp:36]   --->   Operation 331 'fadd' 'norm_1_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 332 [1/5] (7.25ns)   --->   "%dif_7 = fsub float %x_load_7, %SupVec_load_7" [svm.cpp:35]   --->   Operation 332 'fsub' 'dif_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 333 [1/2] (2.32ns)   --->   "%x_load_8 = load float* %x_addr_8, align 4" [svm.cpp:35]   --->   Operation 333 'load' 'x_load_8' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 18> <RAM>
+ST_44 : Operation 334 [1/2] (3.25ns)   --->   "%SupVec_load_8 = load float* %SupVec_addr_8, align 4" [svm.cpp:35]   --->   Operation 334 'load' 'SupVec_load_8' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+
+State 45 <SV = 44> <Delay = 7.25>
+ST_45 : Operation 335 [4/5] (7.25ns)   --->   "%norm_1_6 = fadd float %norm_1_5, %tmp_8_6" [svm.cpp:36]   --->   Operation 335 'fadd' 'norm_1_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 336 [4/4] (5.70ns)   --->   "%tmp_8_7 = fmul float %dif_7, %dif_7" [svm.cpp:36]   --->   Operation 336 'fmul' 'tmp_8_7' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 337 [5/5] (7.25ns)   --->   "%dif_8 = fsub float %x_load_8, %SupVec_load_8" [svm.cpp:35]   --->   Operation 337 'fsub' 'dif_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 7.25>
+ST_46 : Operation 338 [3/5] (7.25ns)   --->   "%norm_1_6 = fadd float %norm_1_5, %tmp_8_6" [svm.cpp:36]   --->   Operation 338 'fadd' 'norm_1_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 339 [3/4] (5.70ns)   --->   "%tmp_8_7 = fmul float %dif_7, %dif_7" [svm.cpp:36]   --->   Operation 339 'fmul' 'tmp_8_7' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 340 [4/5] (7.25ns)   --->   "%dif_8 = fsub float %x_load_8, %SupVec_load_8" [svm.cpp:35]   --->   Operation 340 'fsub' 'dif_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 7.25>
+ST_47 : Operation 341 [2/5] (7.25ns)   --->   "%norm_1_6 = fadd float %norm_1_5, %tmp_8_6" [svm.cpp:36]   --->   Operation 341 'fadd' 'norm_1_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 342 [2/4] (5.70ns)   --->   "%tmp_8_7 = fmul float %dif_7, %dif_7" [svm.cpp:36]   --->   Operation 342 'fmul' 'tmp_8_7' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 343 [3/5] (7.25ns)   --->   "%dif_8 = fsub float %x_load_8, %SupVec_load_8" [svm.cpp:35]   --->   Operation 343 'fsub' 'dif_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 7.25>
+ST_48 : Operation 344 [1/5] (7.25ns)   --->   "%norm_1_6 = fadd float %norm_1_5, %tmp_8_6" [svm.cpp:36]   --->   Operation 344 'fadd' 'norm_1_6' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 345 [1/4] (5.70ns)   --->   "%tmp_8_7 = fmul float %dif_7, %dif_7" [svm.cpp:36]   --->   Operation 345 'fmul' 'tmp_8_7' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 346 [2/5] (7.25ns)   --->   "%dif_8 = fsub float %x_load_8, %SupVec_load_8" [svm.cpp:35]   --->   Operation 346 'fsub' 'dif_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 7.25>
+ST_49 : Operation 347 [5/5] (7.25ns)   --->   "%norm_1_7 = fadd float %norm_1_6, %tmp_8_7" [svm.cpp:36]   --->   Operation 347 'fadd' 'norm_1_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 348 [1/5] (7.25ns)   --->   "%dif_8 = fsub float %x_load_8, %SupVec_load_8" [svm.cpp:35]   --->   Operation 348 'fsub' 'dif_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 7.25>
+ST_50 : Operation 349 [4/5] (7.25ns)   --->   "%norm_1_7 = fadd float %norm_1_6, %tmp_8_7" [svm.cpp:36]   --->   Operation 349 'fadd' 'norm_1_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 350 [4/4] (5.70ns)   --->   "%tmp_8_8_9 = fmul float %dif_8, %dif_8" [svm.cpp:36]   --->   Operation 350 'fmul' 'tmp_8_8_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 7.25>
+ST_51 : Operation 351 [3/5] (7.25ns)   --->   "%norm_1_7 = fadd float %norm_1_6, %tmp_8_7" [svm.cpp:36]   --->   Operation 351 'fadd' 'norm_1_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 352 [3/4] (5.70ns)   --->   "%tmp_8_8_9 = fmul float %dif_8, %dif_8" [svm.cpp:36]   --->   Operation 352 'fmul' 'tmp_8_8_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 7.25>
+ST_52 : Operation 353 [2/5] (7.25ns)   --->   "%norm_1_7 = fadd float %norm_1_6, %tmp_8_7" [svm.cpp:36]   --->   Operation 353 'fadd' 'norm_1_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 354 [2/4] (5.70ns)   --->   "%tmp_8_8_9 = fmul float %dif_8, %dif_8" [svm.cpp:36]   --->   Operation 354 'fmul' 'tmp_8_8_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 7.25>
+ST_53 : Operation 355 [1/5] (7.25ns)   --->   "%norm_1_7 = fadd float %norm_1_6, %tmp_8_7" [svm.cpp:36]   --->   Operation 355 'fadd' 'norm_1_7' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 356 [1/4] (5.70ns)   --->   "%tmp_8_8_9 = fmul float %dif_8, %dif_8" [svm.cpp:36]   --->   Operation 356 'fmul' 'tmp_8_8_9' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 7.25>
+ST_54 : Operation 357 [5/5] (7.25ns)   --->   "%norm_1_8 = fadd float %norm_1_7, %tmp_8_8_9" [svm.cpp:36]   --->   Operation 357 'fadd' 'norm_1_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 7.25>
+ST_55 : Operation 358 [4/5] (7.25ns)   --->   "%norm_1_8 = fadd float %norm_1_7, %tmp_8_8_9" [svm.cpp:36]   --->   Operation 358 'fadd' 'norm_1_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 7.25>
+ST_56 : Operation 359 [3/5] (7.25ns)   --->   "%norm_1_8 = fadd float %norm_1_7, %tmp_8_8_9" [svm.cpp:36]   --->   Operation 359 'fadd' 'norm_1_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 7.25>
+ST_57 : Operation 360 [2/5] (7.25ns)   --->   "%norm_1_8 = fadd float %norm_1_7, %tmp_8_8_9" [svm.cpp:36]   --->   Operation 360 'fadd' 'norm_1_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 7.25>
+ST_58 : Operation 361 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1) nounwind" [svm.cpp:33]   --->   Operation 361 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 362 [1/5] (7.25ns)   --->   "%norm_1_8 = fadd float %norm_1_7, %tmp_8_8_9" [svm.cpp:36]   --->   Operation 362 'fadd' 'norm_1_8' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 363 [1/1] (0.00ns)   --->   "br label %3" [svm.cpp:32]   --->   Operation 363 'br' <Predicate = true> <Delay = 0.00>
+
+State 59 <SV = 3> <Delay = 7.78>
+ST_59 : Operation 364 [1/2] (3.25ns)   --->   "%Co_load = load float* %Co_addr, align 4" [svm.cpp:66]   --->   Operation 364 'load' 'Co_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1222> <ROM>
+ST_59 : Operation 365 [6/6] (7.78ns)   --->   "%tmp_4_12 = fmul double %tmp_3_11, -8.000000e+00" [svm.cpp:66]   --->   Operation 365 'dmul' 'tmp_4_12' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 4> <Delay = 7.78>
+ST_60 : Operation 366 [5/6] (7.78ns)   --->   "%tmp_4_12 = fmul double %tmp_3_11, -8.000000e+00" [svm.cpp:66]   --->   Operation 366 'dmul' 'tmp_4_12' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 5> <Delay = 7.78>
+ST_61 : Operation 367 [4/6] (7.78ns)   --->   "%tmp_4_12 = fmul double %tmp_3_11, -8.000000e+00" [svm.cpp:66]   --->   Operation 367 'dmul' 'tmp_4_12' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 6> <Delay = 7.78>
+ST_62 : Operation 368 [3/6] (7.78ns)   --->   "%tmp_4_12 = fmul double %tmp_3_11, -8.000000e+00" [svm.cpp:66]   --->   Operation 368 'dmul' 'tmp_4_12' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 7> <Delay = 7.78>
+ST_63 : Operation 369 [2/6] (7.78ns)   --->   "%tmp_4_12 = fmul double %tmp_3_11, -8.000000e+00" [svm.cpp:66]   --->   Operation 369 'dmul' 'tmp_4_12' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 8> <Delay = 7.78>
+ST_64 : Operation 370 [1/6] (7.78ns)   --->   "%tmp_4_12 = fmul double %tmp_3_11, -8.000000e+00" [svm.cpp:66]   --->   Operation 370 'dmul' 'tmp_4_12' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 9> <Delay = 7.32>
+ST_65 : Operation 371 [18/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 371 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 66 <SV = 10> <Delay = 7.32>
+ST_66 : Operation 372 [17/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 372 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 67 <SV = 11> <Delay = 7.32>
+ST_67 : Operation 373 [16/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 373 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 68 <SV = 12> <Delay = 7.32>
+ST_68 : Operation 374 [15/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 374 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 69 <SV = 13> <Delay = 7.32>
+ST_69 : Operation 375 [14/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 375 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 70 <SV = 14> <Delay = 7.32>
+ST_70 : Operation 376 [13/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 376 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 71 <SV = 15> <Delay = 7.32>
+ST_71 : Operation 377 [12/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 377 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 72 <SV = 16> <Delay = 7.32>
+ST_72 : Operation 378 [11/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 378 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 73 <SV = 17> <Delay = 7.32>
+ST_73 : Operation 379 [10/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 379 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 74 <SV = 18> <Delay = 7.32>
+ST_74 : Operation 380 [9/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 380 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 75 <SV = 19> <Delay = 7.32>
+ST_75 : Operation 381 [8/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 381 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 76 <SV = 20> <Delay = 7.32>
+ST_76 : Operation 382 [7/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 382 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 77 <SV = 21> <Delay = 7.32>
+ST_77 : Operation 383 [6/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 383 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 78 <SV = 22> <Delay = 7.32>
+ST_78 : Operation 384 [5/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 384 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 79 <SV = 23> <Delay = 7.32>
+ST_79 : Operation 385 [4/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 385 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 80 <SV = 24> <Delay = 7.32>
+ST_80 : Operation 386 [3/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 386 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 81 <SV = 25> <Delay = 7.32>
+ST_81 : Operation 387 [2/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 387 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 82 <SV = 26> <Delay = 7.32>
+ST_82 : Operation 388 [1/1] (5.54ns)   --->   "%tmp_2_10 = fpext float %Co_load to double" [svm.cpp:66]   --->   Operation 388 'fpext' 'tmp_2_10' <Predicate = true> <Delay = 5.54> <Core = "Float2Double">   --->   Core 108 'Float2Double' <Latency = 0> <II = 1> <Delay = 5.54> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_82 : Operation 389 [1/18] (7.32ns)   --->   "%tmp_5_13 = call double @llvm.exp.f64(double %tmp_4_12)" [svm.cpp:66]   --->   Operation 389 'dexp' 'tmp_5_13' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 122 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 83 <SV = 27> <Delay = 7.78>
+ST_83 : Operation 390 [6/6] (7.78ns)   --->   "%tmp_6_14 = fmul double %tmp_2_10, %tmp_5_13" [svm.cpp:66]   --->   Operation 390 'dmul' 'tmp_6_14' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 28> <Delay = 7.78>
+ST_84 : Operation 391 [5/6] (7.78ns)   --->   "%tmp_6_14 = fmul double %tmp_2_10, %tmp_5_13" [svm.cpp:66]   --->   Operation 391 'dmul' 'tmp_6_14' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 29> <Delay = 7.78>
+ST_85 : Operation 392 [4/6] (7.78ns)   --->   "%tmp_6_14 = fmul double %tmp_2_10, %tmp_5_13" [svm.cpp:66]   --->   Operation 392 'dmul' 'tmp_6_14' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 30> <Delay = 7.78>
+ST_86 : Operation 393 [3/6] (7.78ns)   --->   "%tmp_6_14 = fmul double %tmp_2_10, %tmp_5_13" [svm.cpp:66]   --->   Operation 393 'dmul' 'tmp_6_14' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 31> <Delay = 7.78>
+ST_87 : Operation 394 [2/6] (7.78ns)   --->   "%tmp_6_14 = fmul double %tmp_2_10, %tmp_5_13" [svm.cpp:66]   --->   Operation 394 'dmul' 'tmp_6_14' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 32> <Delay = 7.78>
+ST_88 : Operation 395 [1/6] (7.78ns)   --->   "%tmp_6_14 = fmul double %tmp_2_10, %tmp_5_13" [svm.cpp:66]   --->   Operation 395 'dmul' 'tmp_6_14' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 33> <Delay = 8.23>
+ST_89 : Operation 396 [5/5] (8.23ns)   --->   "%tmp_7_15 = fadd double %tmp_6_14, 0xC0068B43A0000000" [svm.cpp:66]   --->   Operation 396 'dadd' 'tmp_7_15' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 90 <SV = 34> <Delay = 8.23>
+ST_90 : Operation 397 [4/5] (8.23ns)   --->   "%tmp_7_15 = fadd double %tmp_6_14, 0xC0068B43A0000000" [svm.cpp:66]   --->   Operation 397 'dadd' 'tmp_7_15' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 91 <SV = 35> <Delay = 8.23>
+ST_91 : Operation 398 [3/5] (8.23ns)   --->   "%tmp_7_15 = fadd double %tmp_6_14, 0xC0068B43A0000000" [svm.cpp:66]   --->   Operation 398 'dadd' 'tmp_7_15' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 92 <SV = 36> <Delay = 8.23>
+ST_92 : Operation 399 [2/5] (8.23ns)   --->   "%tmp_7_15 = fadd double %tmp_6_14, 0xC0068B43A0000000" [svm.cpp:66]   --->   Operation 399 'dadd' 'tmp_7_15' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 93 <SV = 37> <Delay = 8.23>
+ST_93 : Operation 400 [1/5] (8.23ns)   --->   "%tmp_7_15 = fadd double %tmp_6_14, 0xC0068B43A0000000" [svm.cpp:66]   --->   Operation 400 'dadd' 'tmp_7_15' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 94 <SV = 38> <Delay = 8.23>
+ST_94 : Operation 401 [5/5] (8.23ns)   --->   "%sum_1 = fadd double %sum, %tmp_7_15" [svm.cpp:66]   --->   Operation 401 'dadd' 'sum_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 95 <SV = 39> <Delay = 8.23>
+ST_95 : Operation 402 [4/5] (8.23ns)   --->   "%sum_1 = fadd double %sum, %tmp_7_15" [svm.cpp:66]   --->   Operation 402 'dadd' 'sum_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 96 <SV = 40> <Delay = 8.23>
+ST_96 : Operation 403 [3/5] (8.23ns)   --->   "%sum_1 = fadd double %sum, %tmp_7_15" [svm.cpp:66]   --->   Operation 403 'dadd' 'sum_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 97 <SV = 41> <Delay = 8.23>
+ST_97 : Operation 404 [2/5] (8.23ns)   --->   "%sum_1 = fadd double %sum, %tmp_7_15" [svm.cpp:66]   --->   Operation 404 'dadd' 'sum_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 98 <SV = 42> <Delay = 8.23>
+ST_98 : Operation 405 [1/5] (8.23ns)   --->   "%sum_1 = fadd double %sum, %tmp_7_15" [svm.cpp:66]   --->   Operation 405 'dadd' 'sum_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 406 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str, i32 %tmp_8) nounwind" [svm.cpp:67]   --->   Operation 406 'specregionend' 'empty_16' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 407 [1/1] (0.00ns)   --->   "br label %1" [svm.cpp:27]   --->   Operation 407 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('sum') with incoming values : ('sum', svm.cpp:66) [10]  (1.77 ns)
+
+ <State 2>: 7.82ns
+The critical path consists of the following:
+	'phi' operation ('sum') with incoming values : ('sum', svm.cpp:66) [10]  (0 ns)
+	'dcmp' operation ('tmp_12', svm.cpp:69) [162]  (6.82 ns)
+	'and' operation ('tmp_13', svm.cpp:69) [163]  (0 ns)
+	'select' operation ('storemerge_cast_cast', svm.cpp:69) [164]  (0.993 ns)
+
+ <State 3>: 5.55ns
+The critical path consists of the following:
+	'phi' operation ('norm', svm.cpp:36) with incoming values : ('norm_1_8', svm.cpp:36) [27]  (0 ns)
+	'fpext' operation ('tmp_3_11', svm.cpp:66) [147]  (5.55 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('SupVec_load', svm.cpp:35) on array 'SupVec' [41]  (3.25 ns)
+
+ <State 5>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif', svm.cpp:35) [42]  (7.26 ns)
+
+ <State 6>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif', svm.cpp:35) [42]  (7.26 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif', svm.cpp:35) [42]  (7.26 ns)
+
+ <State 8>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif', svm.cpp:35) [42]  (7.26 ns)
+
+ <State 9>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif', svm.cpp:35) [42]  (7.26 ns)
+
+ <State 10>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif_1', svm.cpp:35) [54]  (7.26 ns)
+
+ <State 11>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif_1', svm.cpp:35) [54]  (7.26 ns)
+
+ <State 12>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif_1', svm.cpp:35) [54]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('dif_1', svm.cpp:35) [54]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1', svm.cpp:36) [44]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1', svm.cpp:36) [44]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1', svm.cpp:36) [44]  (7.26 ns)
+
+ <State 17>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1', svm.cpp:36) [44]  (7.26 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1', svm.cpp:36) [44]  (7.26 ns)
+
+ <State 19>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_1', svm.cpp:36) [56]  (7.26 ns)
+
+ <State 20>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_1', svm.cpp:36) [56]  (7.26 ns)
+
+ <State 21>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_1', svm.cpp:36) [56]  (7.26 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_1', svm.cpp:36) [56]  (7.26 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_1', svm.cpp:36) [56]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_2', svm.cpp:36) [68]  (7.26 ns)
+
+ <State 25>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_2', svm.cpp:36) [68]  (7.26 ns)
+
+ <State 26>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_2', svm.cpp:36) [68]  (7.26 ns)
+
+ <State 27>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_2', svm.cpp:36) [68]  (7.26 ns)
+
+ <State 28>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_2', svm.cpp:36) [68]  (7.26 ns)
+
+ <State 29>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_3', svm.cpp:36) [80]  (7.26 ns)
+
+ <State 30>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_3', svm.cpp:36) [80]  (7.26 ns)
+
+ <State 31>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_3', svm.cpp:36) [80]  (7.26 ns)
+
+ <State 32>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_3', svm.cpp:36) [80]  (7.26 ns)
+
+ <State 33>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_3', svm.cpp:36) [80]  (7.26 ns)
+
+ <State 34>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_4', svm.cpp:36) [92]  (7.26 ns)
+
+ <State 35>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_4', svm.cpp:36) [92]  (7.26 ns)
+
+ <State 36>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_4', svm.cpp:36) [92]  (7.26 ns)
+
+ <State 37>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_4', svm.cpp:36) [92]  (7.26 ns)
+
+ <State 38>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_4', svm.cpp:36) [92]  (7.26 ns)
+
+ <State 39>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_5', svm.cpp:36) [104]  (7.26 ns)
+
+ <State 40>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_5', svm.cpp:36) [104]  (7.26 ns)
+
+ <State 41>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_5', svm.cpp:36) [104]  (7.26 ns)
+
+ <State 42>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_5', svm.cpp:36) [104]  (7.26 ns)
+
+ <State 43>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_5', svm.cpp:36) [104]  (7.26 ns)
+
+ <State 44>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_6', svm.cpp:36) [116]  (7.26 ns)
+
+ <State 45>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_6', svm.cpp:36) [116]  (7.26 ns)
+
+ <State 46>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_6', svm.cpp:36) [116]  (7.26 ns)
+
+ <State 47>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_6', svm.cpp:36) [116]  (7.26 ns)
+
+ <State 48>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_6', svm.cpp:36) [116]  (7.26 ns)
+
+ <State 49>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_7', svm.cpp:36) [128]  (7.26 ns)
+
+ <State 50>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_7', svm.cpp:36) [128]  (7.26 ns)
+
+ <State 51>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_7', svm.cpp:36) [128]  (7.26 ns)
+
+ <State 52>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_7', svm.cpp:36) [128]  (7.26 ns)
+
+ <State 53>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_7', svm.cpp:36) [128]  (7.26 ns)
+
+ <State 54>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_8', svm.cpp:36) [140]  (7.26 ns)
+
+ <State 55>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_8', svm.cpp:36) [140]  (7.26 ns)
+
+ <State 56>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_8', svm.cpp:36) [140]  (7.26 ns)
+
+ <State 57>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_8', svm.cpp:36) [140]  (7.26 ns)
+
+ <State 58>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('norm_1_8', svm.cpp:36) [140]  (7.26 ns)
+
+ <State 59>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_4_12', svm.cpp:66) [148]  (7.79 ns)
+
+ <State 60>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_4_12', svm.cpp:66) [148]  (7.79 ns)
+
+ <State 61>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_4_12', svm.cpp:66) [148]  (7.79 ns)
+
+ <State 62>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_4_12', svm.cpp:66) [148]  (7.79 ns)
+
+ <State 63>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_4_12', svm.cpp:66) [148]  (7.79 ns)
+
+ <State 64>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_4_12', svm.cpp:66) [148]  (7.79 ns)
+
+ <State 65>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 66>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 67>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 68>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 69>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 70>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 71>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 72>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 73>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 74>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 75>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 76>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 77>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 78>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 79>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 80>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 81>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 82>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5_13', svm.cpp:66) [149]  (7.32 ns)
+
+ <State 83>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6_14', svm.cpp:66) [150]  (7.79 ns)
+
+ <State 84>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6_14', svm.cpp:66) [150]  (7.79 ns)
+
+ <State 85>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6_14', svm.cpp:66) [150]  (7.79 ns)
+
+ <State 86>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6_14', svm.cpp:66) [150]  (7.79 ns)
+
+ <State 87>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6_14', svm.cpp:66) [150]  (7.79 ns)
+
+ <State 88>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6_14', svm.cpp:66) [150]  (7.79 ns)
+
+ <State 89>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_7_15', svm.cpp:66) [151]  (8.23 ns)
+
+ <State 90>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_7_15', svm.cpp:66) [151]  (8.23 ns)
+
+ <State 91>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_7_15', svm.cpp:66) [151]  (8.23 ns)
+
+ <State 92>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_7_15', svm.cpp:66) [151]  (8.23 ns)
+
+ <State 93>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_7_15', svm.cpp:66) [151]  (8.23 ns)
+
+ <State 94>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('sum', svm.cpp:66) [152]  (8.23 ns)
+
+ <State 95>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('sum', svm.cpp:66) [152]  (8.23 ns)
+
+ <State 96>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('sum', svm.cpp:66) [152]  (8.23 ns)
+
+ <State 97>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('sum', svm.cpp:66) [152]  (8.23 ns)
+
+ <State 98>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('sum', svm.cpp:66) [152]  (8.23 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

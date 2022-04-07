@@ -1,0 +1,22 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 60 -defaultsOSRD
+preplace port ACLK -pg 1 -y 20 -defaultsOSRD
+preplace port S_AXIS_S2MM_FROM_ACCELERATOR -pg 1 -y 20 -defaultsOSRD
+preplace port M_AXIS_TO_ACCELERATOR -pg 1 -y 100 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 80 -defaultsOSRD
+preplace portBus ARESETN -pg 1 -y 40 -defaultsOSRD
+preplace inst PL_GEN_ARESETN_50 -pg 1 -lvl 2 -y 100 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 2 -y 1040 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -y 280 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace inst PS_ARM -pg 1 -lvl 2 -y 680 -defaultsOSRD
+preplace inst PS2PL_DMA -pg 1 -lvl 2 -y 890 -defaultsOSRD
+preplace inst PL_GEN_ARESETN_100 -pg 1 -lvl 2 -y 280 -defaultsOSRD
+preplace inst PL2PS_DMA -pg 1 -lvl 2 -y 460 -defaultsOSRD
+levelinfo -pg 1 0 170 570 830 -top 0 -bot 1120
+",
+}
+

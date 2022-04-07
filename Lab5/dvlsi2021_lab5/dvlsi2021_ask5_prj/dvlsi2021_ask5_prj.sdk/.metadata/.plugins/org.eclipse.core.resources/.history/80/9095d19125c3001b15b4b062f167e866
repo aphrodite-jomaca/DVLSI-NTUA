@@ -1,0 +1,262 @@
+#include <stdio.h>
+#include <unistd.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xparameters_ps.h"
+#include "xaxidma.h"
+#include "xtime_l.h"
+#include "image.h"
+
+#define TX_DMA_ID                 XPAR_PS2PL_DMA_DEVICE_ID
+#define TX_DMA_MM2S_LENGTH_ADDR  (XPAR_PS2PL_DMA_BASEADDR + 0x28) // Reports actual number of bytes transferred from PS->PL (use Xil_In32 for report)
+
+#define RX_DMA_ID                 XPAR_PL2PS_DMA_DEVICE_ID
+#define RX_DMA_S2MM_LENGTH_ADDR  (XPAR_PL2PS_DMA_BASEADDR + 0x58) // Reports actual number of bytes transferred from PL->PS (use Xil_In32 for report)
+
+#define TX_BUFFER (XPAR_DDR_MEM_BASEADDR + 0x10000000) // 0 + 256MByte
+#define RX_BUFFER (XPAR_DDR_MEM_BASEADDR + 0x18000000) // 0 + 384MByte
+
+#define N			0x400
+#define M			0x402
+#define MAX_PKT_LEN 0x100000 //(N*N)
+
+/* User application global variables & defines */
+/*
+ * Device instance definitions
+ */
+XAxiDma TXAxiDma;
+XAxiDma RXAxiDma;
+
+int main()
+{
+	Xil_DCacheDisable();
+
+	XTime preExecCyclesFPGA = 0;
+	XTime postExecCyclesFPGA = 0;
+	XTime preExecCyclesSW = 0;
+	XTime postExecCyclesSW = 0;
+
+	print("HELLO 1\r\n");
+	// User application local variables
+
+	init_platform();
+
+	/**************************DEVICE INITIALIZATION******************************/
+
+	u8 *TxBufferPtr;
+	u32 *RxBufferPtr;
+	int Status;
+
+	TxBufferPtr = (u8 *)TX_BUFFER;
+	RxBufferPtr = (u32 *)RX_BUFFER;
+    // Step 1: Initialize TX-DMA Device (PS->PL)
+
+	XAxiDma_Config *TXCfgPtr;
+	int TXStatus;
+
+	TXCfgPtr = XAxiDma_LookupConfig(TX_DMA_ID);
+	if (!TXCfgPtr) {
+		xil_printf("No config found for %d\r\n", TX_DMA_ID);
+		return XST_FAILURE;
+	}
+	TXStatus = XAxiDma_CfgInitialize(&TXAxiDma, TXCfgPtr);
+	if (TXStatus != XST_SUCCESS) {
+		xil_printf("Initialization failed %d\r\n", TXStatus);
+		return XST_FAILURE;
+	}
+	/* Disable interrupts, we use polling mode
+		 */
+
+	XAxiDma_IntrDisable(&TXAxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&TXAxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DMA_TO_DEVICE);
+
+    // Step 2: Initialize RX-DMA Device (PL->PS)
+	XAxiDma_Config *RXCfgPtr;
+	int RXStatus;
+
+	RXCfgPtr = XAxiDma_LookupConfig(RX_DMA_ID);
+	if (!RXCfgPtr) {
+		xil_printf("No config found for %d\r\n", RX_DMA_ID);
+		return XST_FAILURE;
+	}
+	RXStatus = XAxiDma_CfgInitialize(&RXAxiDma, RXCfgPtr);
+	if (RXStatus != XST_SUCCESS) {
+		xil_printf("Initialization failed %d\r\n", RXStatus);
+		return XST_FAILURE;
+	}
+	XAxiDma_IntrDisable(&RXAxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&RXAxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DMA_TO_DEVICE);
+
+	print("HELLO 2\r\n");
+
+	for(int Index = 0; Index < MAX_PKT_LEN; Index ++) {
+		TxBufferPtr[Index] = pixels[Index];
+	}
+
+/*****************************************************************************/
+	print("HELLO 3\r\n");
+
+    XTime_GetTime(&preExecCyclesFPGA);
+    for(int i = 0; i < 10; i++) printf("%lu \n",(unsigned long)RxBufferPtr[i]);
+    // Step 3 : Perform FPGA processing
+    //      3a: Setup RX-DMA transaction
+    //      3b: Setup TX-DMA transaction
+    //      3c: Wait for TX-DMA & RX-DMA to finish
+	for(int Times = 0; Times < 4096; Times ++) {
+
+		Status = XAxiDma_SimpleTransfer(&RXAxiDma,(UINTPTR) (RxBufferPtr + Times*256),
+				256, XAXIDMA_DEVICE_TO_DMA);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		print("RX OK\r\n");
+
+		Status = XAxiDma_SimpleTransfer(&TXAxiDma,(UINTPTR) (TxBufferPtr + Times*256),
+				256, XAXIDMA_DMA_TO_DEVICE);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		print("TX OK\r\n");
+
+		/*while ((XAxiDma_Busy(&RXAxiDma,XAXIDMA_DEVICE_TO_DMA)) || (XAxiDma_Busy(&RXAxiDma,XAXIDMA_DMA_TO_DEVICE)) ||
+			   (XAxiDma_Busy(&TXAxiDma,XAXIDMA_DMA_TO_DEVICE)) || (XAxiDma_Busy(&TXAxiDma,XAXIDMA_DEVICE_TO_DMA)))
+		{
+				// Wait
+		}*/
+	}
+		sleep(20);
+
+		if (XAxiDma_Busy(&RXAxiDma,XAXIDMA_DEVICE_TO_DMA)) print("RX DEVICE TO DMA BUSY\r\n");
+		if (XAxiDma_Busy(&RXAxiDma,XAXIDMA_DMA_TO_DEVICE)) print("RX DMA TO DEVICE BUSY\r\n");
+		if (XAxiDma_Busy(&TXAxiDma,XAXIDMA_DEVICE_TO_DMA)) print("TX DEVICE TO DMA BUSY\r\n");
+		if (XAxiDma_Busy(&TXAxiDma,XAXIDMA_DMA_TO_DEVICE)) print("TX DMA TO DEVICE BUSY\r\n");
+
+		for(int i = 0; i < 10; i++) printf("%lu \n",(unsigned long)RxBufferPtr[i]);
+
+
+    XTime_GetTime(&postExecCyclesFPGA);
+
+    /*****************************************************************************/
+
+    print("HELLO 4\r\n");
+    XTime_GetTime(&preExecCyclesSW);
+
+    // Step 5: Perform SW processing
+	// array to store zero-padded input image
+/*
+	int image[M*M];
+	for(int i = 0; i < M*M; i++)
+		image[i] = 0;
+
+	print("HELLO 5\r\n");
+  	int i, j, k, l;
+
+  	for (i=1; i<M-1; ++i)
+	{
+        for (j=1; j<M-1; ++j)
+		{
+          k = i*M + j;
+		  l = (i-1)*N + (j-1);
+		  image[k]=pixels[l];
+      	}
+  	}
+  	print("HELLO 6\r\n");
+
+	int row, col = 0;
+	int *cp; // central pixel for each 3x3 neighborhood
+	int r_sw[N*N];
+	int g_sw[N*N];
+	int b_sw[N*N];
+
+	print("HELLO 7\r\n");
+
+  	for (i=1; i<M-1; ++i)
+	{
+        for (j=1; j<M-1; ++j)
+		{
+        	k = i*M + j;
+			l = row*N + col;
+          	cp = image + k;
+
+			//G(with B neighbors)
+			if (row % 2 == 0){
+				if (col % 2 == 0){
+					r_sw[l]   = (cp[-M] + cp[M])/2;
+					g_sw[l] = cp[0];
+					b_sw[l]  = (cp[-1] + cp[1])/2;
+				} //B
+				else{
+					r_sw[l]   = (cp[M-1] + cp[M+1] + cp[-1-M] + cp[1-M])/4;
+					g_sw[l] = (cp[-1] + cp[1] + cp[-M] + cp[M])/4;
+					b_sw[l]  = cp[0];
+				}
+			} //R
+			else{
+				if (col % 2 == 0){
+					r_sw[l]   = cp[0];
+					g_sw[l] = (cp[-1] + cp[1] + cp[-M] + cp[M])/4;
+					b_sw[l]  = (cp[M-1] + cp[M+1] + cp[-1-M] + cp[+1-M])/4;
+				} //G(with R neighbors)
+				else{
+					r_sw[l]   = (cp[-1] + cp[1])/2;
+					g_sw[l] = cp[0];
+					b_sw[l]  = (cp[-M] + cp[M])/2;
+				}
+			}
+			if (col == N-1){
+				row++;
+				col = 0;
+			}
+			else{
+				col++;
+			}
+		}
+	}
+  	print("HELLO 8\r\n");
+*/
+    XTime_GetTime(&postExecCyclesSW);
+    /*****************************************************************************/
+
+    // Step 6: Compare FPGA and SW results
+    //     6a: Report total percentage error
+    //     6b: Report FPGA execution time in cycles (use preExecCyclesFPGA and postExecCyclesFPGA)
+    //     6c: Report SW execution time in cycles (use preExecCyclesSW and postExecCyclesSW)
+    //     6d: Report speedup (SW_execution_time / FPGA_exection_time)
+/*
+    int r_hw[N*N];
+    int g_hw[N*N];
+    int b_hw[N*N];
+    int err = 0;
+    int err_per, FPGA_cycles, SW_cycles, speedup;
+    print("HELLO 9\r\n");
+    for (i=0; i<MAX_PKT_LEN; i++)
+    {
+    	r_hw[i] = RxBufferPtr[i] & 0x0000ff;
+    	g_hw[i] = (RxBufferPtr[i] & 0x00ff00) >> 2;
+    	b_hw[i] = (RxBufferPtr[i] & 0xff0000) >> 4;
+    	if (r_hw[i] == r_sw[i] && g_hw[i] == g_sw[i] && b_hw[i] == b_sw[i]) continue;
+    	else err++;
+    }
+    print("HELLO 10\r\n");
+    err_per = (err/MAX_PKT_LEN)*100;
+    FPGA_cycles = postExecCyclesFPGA - preExecCyclesFPGA;
+    SW_cycles = postExecCyclesSW - preExecCyclesSW;
+    speedup = SW_cycles/FPGA_cycles;
+    printf("Total Percentage error: %d %% \n", err_per);
+    printf("FPGA execution time in cycles: %d \n", FPGA_cycles);
+    printf("SW execution time in cycles: %d \n", SW_cycles);
+    printf("Speedup: %d \n", speedup);
+    */
+    print("BYE\r\n");
+    cleanup_platform();
+    return 0;
+}

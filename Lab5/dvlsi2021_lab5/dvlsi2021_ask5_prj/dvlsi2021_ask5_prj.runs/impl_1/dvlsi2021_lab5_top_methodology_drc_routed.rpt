@@ -1,0 +1,158 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jun  4 09:53:49 2021
+| Host         : DESKTOP-II5SP0K running 64-bit major release  (build 9200)
+| Command      : report_methodology -file dvlsi2021_lab5_top_methodology_drc_routed.rpt -pb dvlsi2021_lab5_top_methodology_drc_routed.pb -rpx dvlsi2021_lab5_top_methodology_drc_routed.rpx
+| Design       : dvlsi2021_lab5_top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 24
++-----------+----------+------------------------------------------------+------------+
+| Rule      | Severity | Description                                    | Violations |
++-----------+----------+------------------------------------------------+------------+
+| TIMING-6  | Warning  | No common primary clock between related clocks | 1          |
+| TIMING-7  | Warning  | No common node between related clocks          | 1          |
+| TIMING-14 | Warning  | LUT on the clock tree                          | 1          |
+| TIMING-20 | Warning  | Non-clocked latch                              | 21         |
++-----------+----------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and clk_fpga_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_fpga_1]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and clk_fpga_1 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_fpga_1]
+Related violations: <none>
+
+TIMING-14#1 Warning
+LUT on the clock tree  
+The LUT PROCESSING_SYSTEM_INSTANCE/n_0_212_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[0] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[10] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[11] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[12] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[13] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[14] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[15] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[16] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[17] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[18] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[19] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[1] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[20] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[2] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[3] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[4] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[5] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[6] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[7] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[8] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch ACCELERATOR/counter_reg[9] cannot be properly analyzed as its control pin ACCELERATOR/counter_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+

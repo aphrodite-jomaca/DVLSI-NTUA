@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="svm_top.cpp" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\mult_svms\svm_top.cpp"/>
+    <originFiles name="svm.cpp" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\mult_svms\svm.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testing_set.csv" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\mult_svms\testing_set.csv"/>
+    <originFiles name="svm_test.cpp" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\mult_svms\svm_test.cpp"/>
+    <originFiles name="annotation.csv" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\mult_svms\annotation.csv"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

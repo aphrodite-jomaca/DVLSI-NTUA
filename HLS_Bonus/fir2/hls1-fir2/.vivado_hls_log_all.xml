@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_0' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.742+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_1' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.676+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_2' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.609+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_3' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.508+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_4' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.443+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_5' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.362+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_V_6' is power-on initialization." projectName="hls1-fir2" solutionName="solution1" date="2021-06-14T15:15:51.337+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x3' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution3" date="2021-07-15T23:40:49.831+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x3' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution3" date="2021-07-15T23:40:49.753+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2' has read operations in process function 'svm7'." projectName="mult_svms" solutionName="solution3" date="2021-07-15T23:40:49.632+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution3" date="2021-07-15T23:40:49.548+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution3" date="2021-07-15T23:40:49.417+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution3" date="2021-07-15T23:40:49.345+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[8]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.763+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[8]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.686+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[7]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.642+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[7]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.591+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[6]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.523+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[6]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.478+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[5]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.430+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[5]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.331+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[4]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.278+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[4]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.206+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[3]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.138+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[3]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:08.054+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[2]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.998+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[2]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.962+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[1]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.882+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[1]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.802+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x2[0]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.726+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x2[0]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.642+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[8]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.554+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[8]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.490+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[7]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.426+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[7]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.378+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[6]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.314+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[6]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.242+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[5]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.182+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[5]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.130+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[4]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:07.042+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[4]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.974+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[3]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.921+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[3]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.854+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[2]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.802+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[2]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.754+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[1]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.682+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[1]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.606+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[0]' has read operations in process function 'svm6'." projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.562+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[0]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution2" date="2021-07-15T21:46:06.534+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[8]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.243+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[8]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.212+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[7]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.185+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[7]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.154+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[6]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.130+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[6]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.102+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[5]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.079+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[5]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.055+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[4]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.035+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[4]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:35.011+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[3]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.979+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[3]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.958+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[2]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.937+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[2]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.920+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[1]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.904+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[1]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.888+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'x1[0]' has read operations in process function 'svm'." projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.848+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'x1[0]' in the middle of dataflow may stall the dataflow pipeline:" projectName="mult_svms" solutionName="solution1" date="2021-07-15T20:56:34.824+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

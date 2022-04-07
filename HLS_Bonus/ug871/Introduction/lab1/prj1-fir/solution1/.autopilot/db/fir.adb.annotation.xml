@@ -1,0 +1,14 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="14" filename="fir.c" linenumber="61" name="i_cast" contextFuncName="fir" moduleName="fir" rtlName="i_cast_fu_133_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="15" filename="fir.c" linenumber="61" name="tmp" contextFuncName="fir" moduleName="fir" rtlName="tmp_fu_137_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="20" filename="fir.c" linenumber="62" name="tmp_1" contextFuncName="fir" moduleName="fir" rtlName="tmp_1_fu_145_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="23" filename="fir.c" linenumber="66" name="tmp_2" contextFuncName="fir" moduleName="fir" rtlName="grp_fu_126_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="24" filename="fir.c" linenumber="66" name="tmp_3" contextFuncName="fir" moduleName="fir" rtlName="tmp_3_fu_151_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="27" filename="fir.c" linenumber="66" name="tmp_4" contextFuncName="fir" moduleName="fir" rtlName="tmp_4_fu_156_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="36" filename="fir.c" linenumber="69" name="tmp_5" contextFuncName="fir" moduleName="fir" rtlName="tmp_5_fu_160_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="39" filename="fir.c" linenumber="69" name="tmp_6" contextFuncName="fir" moduleName="fir" rtlName="tmp_6_fu_164_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="20" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="40" filename="fir.c" linenumber="69" name="acc_1" contextFuncName="fir" moduleName="fir" rtlName="acc_1_fu_169_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<item  id="41" filename="fir.c" linenumber="61" name="i_1" contextFuncName="fir" moduleName="fir" rtlName="grp_fu_126_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\Introduction\lab1"><\/item>
+<\/annotationInfo>
+</annotationInfo>

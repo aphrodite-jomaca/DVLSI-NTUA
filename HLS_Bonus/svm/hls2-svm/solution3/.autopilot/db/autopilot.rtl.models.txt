@@ -1,0 +1,11 @@
+svm_faddfsub_32nsbkb
+svm_fsub_32ns_32ncud
+svm_fmul_32ns_32ndEe
+svm_fpext_32ns_64eOg
+svm_dadd_64ns_64nfYi
+svm_dmul_64ns_64ng8j
+svm_dcmp_64ns_64nhbi
+svm_dexp_64ns_64nibs
+svm_SupVec
+svm_Co
+svm

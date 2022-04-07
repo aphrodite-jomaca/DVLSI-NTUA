@@ -1,0 +1,177 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Afroditi' on host 'desktop-ii5sp0k' (Windows NT_amd64 version 6.2) on Thu Jul 15 23:40:29 +0300 2021
+INFO: [HLS 200-10] In directory 'C:/Users/Afroditi/Documents/8thSemester/dvlsi/HLS_Bonus/mult_svms'
+INFO: [HLS 200-10] Opening project 'C:/Users/Afroditi/Documents/8thSemester/dvlsi/HLS_Bonus/mult_svms/mult_svms'.
+INFO: [HLS 200-10] Adding design file 'svm_top.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'svm.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'testing_set.csv' to the project
+INFO: [HLS 200-10] Adding test bench file 'svm_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'annotation.csv' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/Afroditi/Documents/8thSemester/dvlsi/HLS_Bonus/mult_svms/mult_svms/solution3'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-10] Analyzing design file 'svm.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'svm_top.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 101.730 ; gain = 45.688
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 101.730 ; gain = 45.688
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 110.691 ; gain = 54.648
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 117.164 ; gain = 61.121
+WARNING: [XFORM 203-713] Reading dataflow channel 'x1' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'x1' has read operations in process function 'svm6'.
+WARNING: [XFORM 203-713] Reading dataflow channel 'x2' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'x2' has read operations in process function 'svm7'.
+WARNING: [XFORM 203-713] Reading dataflow channel 'x3' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'x3' has read operations in process function 'svm'.
+INFO: [XFORM 203-712] Applying dataflow to function 'svm_top', detected/extracted 4 process function(s): 
+	 'svm5'
+	 'svm6'
+	 'svm7'
+	 'svm'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 144.020 ; gain = 87.977
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 175.137 ; gain = 119.094
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'svm_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'svm5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.27 seconds; current allocated memory: 134.250 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 135.063 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'svm6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.603 seconds; current allocated memory: 135.821 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.277 seconds; current allocated memory: 136.494 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'svm7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.583 seconds; current allocated memory: 137.237 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.357 seconds; current allocated memory: 137.909 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'svm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.568 seconds; current allocated memory: 138.652 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.451 seconds; current allocated memory: 139.325 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'svm_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.371 seconds; current allocated memory: 139.377 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.669 seconds; current allocated memory: 139.536 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'svm5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'svm_top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'svm_top_faddfsub_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_fsub_32ns_32ns_32_5_full_dsp_1' to 'svm_top_fsub_32nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'svm_top_fmul_32nsdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_fpext_32ns_64_1_1' to 'svm_top_fpext_32neOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_dadd_64ns_64ns_64_5_full_dsp_1' to 'svm_top_dadd_64nsfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_dmul_64ns_64ns_64_6_max_dsp_1' to 'svm_top_dmul_64nsg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_dcmp_64ns_64ns_1_1_1' to 'svm_top_dcmp_64nshbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'svm_top_dexp_64ns_64ns_64_18_full_dsp_1' to 'svm_top_dexp_64nsibs' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dadd_64nsfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dcmp_64nshbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dexp_64nsibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dmul_64nsg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_faddfsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fmul_32nsdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fpext_32neOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fsub_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'svm5'.
+INFO: [HLS 200-111]  Elapsed time: 0.713 seconds; current allocated memory: 141.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'svm6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dadd_64nsfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dcmp_64nshbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dexp_64nsibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dmul_64nsg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_faddfsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fmul_32nsdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fpext_32neOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fsub_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'svm6'.
+INFO: [HLS 200-111]  Elapsed time: 1.459 seconds; current allocated memory: 142.822 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'svm7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dadd_64nsfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dcmp_64nshbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dexp_64nsibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dmul_64nsg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_faddfsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fmul_32nsdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fpext_32neOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fsub_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'svm7'.
+INFO: [HLS 200-111]  Elapsed time: 1.457 seconds; current allocated memory: 144.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'svm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dadd_64nsfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dcmp_64nshbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dexp_64nsibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_dmul_64nsg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_faddfsub_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fmul_32nsdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fpext_32neOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'svm_top_fsub_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'svm'.
+INFO: [HLS 200-111]  Elapsed time: 1.505 seconds; current allocated memory: 145.951 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'svm_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/class_hw0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/class_hw1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/class_hw2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/class_hw3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/x0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/x1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/x2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'svm_top/x3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'svm_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'svm_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.809 seconds; current allocated memory: 146.416 MB.
+INFO: [RTMG 210-279] Implementing memory 'svm5_SupVec12_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'svm5_Co9_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 221.816 ; gain = 165.773
+INFO: [SYSC 207-301] Generating SystemC RTL for svm_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for svm_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for svm_top.
+INFO: [HLS 200-112] Total elapsed time: 43.818 seconds; peak allocated memory: 146.416 MB.

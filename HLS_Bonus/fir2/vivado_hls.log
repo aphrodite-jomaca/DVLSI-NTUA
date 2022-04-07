@@ -1,0 +1,55 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Afroditi' on host 'desktop-ii5sp0k' (Windows NT_amd64 version 6.2) on Mon Jun 14 15:15:27 +0300 2021
+INFO: [HLS 200-10] In directory 'C:/Users/Afroditi/Documents/8thSemester/dvlsi/HLS_Bonus/fir2'
+INFO: [HLS 200-10] Opening project 'C:/Users/Afroditi/Documents/8thSemester/dvlsi/HLS_Bonus/fir2/hls1-fir2'.
+INFO: [HLS 200-10] Adding design file 'fir.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'fir_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/Afroditi/Documents/8thSemester/dvlsi/HLS_Bonus/fir2/hls1-fir2/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 101.852 ; gain = 46.062
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 101.852 ; gain = 46.062
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 113.707 ; gain = 57.918
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 120.289 ; gain = 64.500
+INFO: [XFORM 203-102] Partitioning array 'shift_reg.V' automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 147.551 ; gain = 91.762
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 150.770 ; gain = 94.980
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.89 seconds; current allocated memory: 100.151 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 100.303 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_V_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [HLS 200-111]  Elapsed time: 0.655 seconds; current allocated memory: 100.589 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 150.770 ; gain = 94.980
+INFO: [SYSC 207-301] Generating SystemC RTL for fir.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-112] Total elapsed time: 26.353 seconds; peak allocated memory: 100.589 MB.

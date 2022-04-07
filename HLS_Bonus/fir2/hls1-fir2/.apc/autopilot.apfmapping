@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.cpp" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\fir2\fir.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="out.gold.dat" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\fir2\out.gold.dat"/>
+    <originFiles name="fir_test.cpp" path="C:\Users\Afroditi\Documents\8thSemester\dvlsi\HLS_Bonus\fir2\fir_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vivado HLS Report for 'svm_top'
+================================================================
+* Date:           Thu Jul 15 23:41:02 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        mult_svms
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.317|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  175969|  175969|  175970|  175970| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------+-------+--------+--------+--------+--------+---------+
+        |         |       |     Latency     |     Interval    | Pipeline|
+        | Instance| Module|   min  |   max  |   min  |   max  |   Type  |
+        +---------+-------+--------+--------+--------+--------+---------+
+        |svm5_U0  |svm5   |  175969|  175969|  175969|  175969|   none  |
+        |svm6_U0  |svm6   |  175969|  175969|  175969|  175969|   none  |
+        |svm7_U0  |svm7   |  175969|  175969|  175969|  175969|   none  |
+        |svm_U0   |svm    |  175969|  175969|  175969|  175969|   none  |
+        +---------+-------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     62|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |      272|    200|   16244|  30084|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     72|
+|Register         |        -|      -|      12|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |      272|    200|   16256|  30218|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       97|     90|      15|     56|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +---------+-------+---------+-------+------+------+
+    | Instance| Module| BRAM_18K| DSP48E|  FF  |  LUT |
+    +---------+-------+---------+-------+------+------+
+    |svm_U0   |svm    |       68|     50|  4061|  7521|
+    |svm5_U0  |svm5   |       68|     50|  4061|  7521|
+    |svm6_U0  |svm6   |       68|     50|  4061|  7521|
+    |svm7_U0  |svm7   |       68|     50|  4061|  7521|
+    +---------+-------+---------+-------+------+------+
+    |Total    |       |      272|    200| 16244| 30084|
+    +---------+-------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |svm5_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |svm6_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |svm7_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |svm_U0_ap_ready_count     |     +    |      0|  0|  10|           2|           1|
+    |ap_idle                   |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_done              |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready             |    and   |      0|  0|   2|           1|           1|
+    |svm5_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |svm6_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |svm7_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |svm_U0_ap_start           |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_svm5_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_svm6_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_svm7_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_svm_U0_ap_ready   |    or    |      0|  0|   2|           1|           1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |Total                     |          |      0|  0|  62|          19|          15|
+    +--------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_svm5_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_svm6_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_svm7_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_svm_U0_ap_ready   |   9|          2|    1|          2|
+    |svm5_U0_ap_ready_count        |   9|          2|    2|          4|
+    |svm6_U0_ap_ready_count        |   9|          2|    2|          4|
+    |svm7_U0_ap_ready_count        |   9|          2|    2|          4|
+    |svm_U0_ap_ready_count         |   9|          2|    2|          4|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         |  72|         16|   12|         24|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+---+----+-----+-----------+
+    |             Name             | FF| LUT| Bits| Const Bits|
+    +------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_svm5_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_svm6_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_svm7_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_svm_U0_ap_ready   |  1|   0|    1|          0|
+    |svm5_U0_ap_ready_count        |  2|   0|    2|          0|
+    |svm6_U0_ap_ready_count        |  2|   0|    2|          0|
+    |svm7_U0_ap_ready_count        |  2|   0|    2|          0|
+    |svm_U0_ap_ready_count         |  2|   0|    2|          0|
+    +------------------------------+---+----+-----+-----------+
+    |Total                         | 12|   0|   12|          0|
+    +------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------+-----+-----+------------+--------------+--------------+
+|class_hw0         | out |   16|   ap_vld   |   class_hw0  |    pointer   |
+|class_hw0_ap_vld  | out |    1|   ap_vld   |   class_hw0  |    pointer   |
+|class_hw1         | out |   16|   ap_vld   |   class_hw1  |    pointer   |
+|class_hw1_ap_vld  | out |    1|   ap_vld   |   class_hw1  |    pointer   |
+|class_hw2         | out |   16|   ap_vld   |   class_hw2  |    pointer   |
+|class_hw2_ap_vld  | out |    1|   ap_vld   |   class_hw2  |    pointer   |
+|class_hw3         | out |   16|   ap_vld   |   class_hw3  |    pointer   |
+|class_hw3_ap_vld  | out |    1|   ap_vld   |   class_hw3  |    pointer   |
+|x0_address0       | out |    5|  ap_memory |      x0      |     array    |
+|x0_ce0            | out |    1|  ap_memory |      x0      |     array    |
+|x0_d0             | out |   32|  ap_memory |      x0      |     array    |
+|x0_q0             |  in |   32|  ap_memory |      x0      |     array    |
+|x0_we0            | out |    1|  ap_memory |      x0      |     array    |
+|x0_address1       | out |    5|  ap_memory |      x0      |     array    |
+|x0_ce1            | out |    1|  ap_memory |      x0      |     array    |
+|x0_d1             | out |   32|  ap_memory |      x0      |     array    |
+|x0_q1             |  in |   32|  ap_memory |      x0      |     array    |
+|x0_we1            | out |    1|  ap_memory |      x0      |     array    |
+|x1_address0       | out |    5|  ap_memory |      x1      |     array    |
+|x1_ce0            | out |    1|  ap_memory |      x1      |     array    |
+|x1_d0             | out |   32|  ap_memory |      x1      |     array    |
+|x1_q0             |  in |   32|  ap_memory |      x1      |     array    |
+|x1_we0            | out |    1|  ap_memory |      x1      |     array    |
+|x1_address1       | out |    5|  ap_memory |      x1      |     array    |
+|x1_ce1            | out |    1|  ap_memory |      x1      |     array    |
+|x1_d1             | out |   32|  ap_memory |      x1      |     array    |
+|x1_q1             |  in |   32|  ap_memory |      x1      |     array    |
+|x1_we1            | out |    1|  ap_memory |      x1      |     array    |
+|x2_address0       | out |    5|  ap_memory |      x2      |     array    |
+|x2_ce0            | out |    1|  ap_memory |      x2      |     array    |
+|x2_d0             | out |   32|  ap_memory |      x2      |     array    |
+|x2_q0             |  in |   32|  ap_memory |      x2      |     array    |
+|x2_we0            | out |    1|  ap_memory |      x2      |     array    |
+|x2_address1       | out |    5|  ap_memory |      x2      |     array    |
+|x2_ce1            | out |    1|  ap_memory |      x2      |     array    |
+|x2_d1             | out |   32|  ap_memory |      x2      |     array    |
+|x2_q1             |  in |   32|  ap_memory |      x2      |     array    |
+|x2_we1            | out |    1|  ap_memory |      x2      |     array    |
+|x3_address0       | out |    5|  ap_memory |      x3      |     array    |
+|x3_ce0            | out |    1|  ap_memory |      x3      |     array    |
+|x3_d0             | out |   32|  ap_memory |      x3      |     array    |
+|x3_q0             |  in |   32|  ap_memory |      x3      |     array    |
+|x3_we0            | out |    1|  ap_memory |      x3      |     array    |
+|x3_address1       | out |    5|  ap_memory |      x3      |     array    |
+|x3_ce1            | out |    1|  ap_memory |      x3      |     array    |
+|x3_d1             | out |   32|  ap_memory |      x3      |     array    |
+|x3_q1             |  in |   32|  ap_memory |      x3      |     array    |
+|x3_we1            | out |    1|  ap_memory |      x3      |     array    |
+|ap_clk            |  in |    1| ap_ctrl_hs |    svm_top   | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs |    svm_top   | return value |
+|ap_done           | out |    1| ap_ctrl_hs |    svm_top   | return value |
+|ap_start          |  in |    1| ap_ctrl_hs |    svm_top   | return value |
+|ap_ready          | out |    1| ap_ctrl_hs |    svm_top   | return value |
+|ap_idle           | out |    1| ap_ctrl_hs |    svm_top   | return value |
++------------------+-----+-----+------------+--------------+--------------+
+
